@@ -42,6 +42,11 @@ const Header = () => (
             <a>Accordion</a>
           </Link>
         </li>
+        <li>
+          <Link href="/tabs">
+            <a>Tabs</a>
+          </Link>
+        </li>
       </ul>
     </MainNavigation>
   </div>
