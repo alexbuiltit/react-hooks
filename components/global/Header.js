@@ -37,6 +37,11 @@ const Header = () => (
             <a>A content stepper</a>
           </Link>
         </li>
+        <li>
+          <Link href="/accordion">
+            <a>Accordion</a>
+          </Link>
+        </li>
       </ul>
     </MainNavigation>
   </div>

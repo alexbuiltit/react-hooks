@@ -26,6 +26,14 @@ const Index = () => {
           It's not that impressive to look at, but it's a good starting point
         </ModalFooter>
       </Modal>
+      <Modal uniqueId="modalTwo">
+        <ModalHeader>
+          <h1>A second modal working</h1>
+        </ModalHeader>
+        <ModalContent>
+          <p>It's complete magic!</p>
+        </ModalContent>
+      </Modal>
     </Layout>
   );
 };
