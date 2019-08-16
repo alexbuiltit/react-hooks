@@ -23,17 +23,17 @@ const Header = () => (
     <MainNavigation>
       <ul>
         <li>
-          <Link href="/" prefetch={true}>
+          <Link href="/">
             <a>Home</a>
           </Link>
         </li>
         <li>
-          <Link href="/modal" prefetch={true}>
+          <Link href="/modal">
             <a>A fully accessible Modal</a>
           </Link>
         </li>
         <li>
-          <Link href="/stepper" prefetch={true}>
+          <Link href="/stepper">
             <a>A content stepper</a>
           </Link>
         </li>
