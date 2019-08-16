@@ -32,6 +32,11 @@ const Header = () => (
             <a>A fully accessible Modal</a>
           </Link>
         </li>
+        <li>
+          <Link href="/stepper" prefetch={true}>
+            <a>A content stepper</a>
+          </Link>
+        </li>
       </ul>
     </MainNavigation>
   </div>

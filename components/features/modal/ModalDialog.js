@@ -8,7 +8,7 @@ const Dialog = styled.div`
   border: 1px solid #000;
   background-color: #fff;
   min-height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 50vw;
   transform: translateX(-50%);
