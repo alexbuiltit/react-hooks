@@ -1,15 +1,8 @@
-import React from 'react'
-import Layout from '../components/global/Layout'
-import Link from 'next/link'
+import React from 'react';
+import Layout from '../components/global/Layout';
 
 const Index = () => {
-    return (
-        <Layout>
-            <Link href="/modal" prefetch={true}>
-                <a>A fully accessible Modal</a>
-            </Link>
-        </Layout>
-    )
-}
+  return <Layout />;
+};
 
-export default Index
+export default Index;
