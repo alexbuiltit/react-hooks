@@ -43,6 +43,7 @@ const ModalDialog = ({ closeFunction, uniqueId, children }) => {
 
 ModalDialog.propTypes = {
   closeFunction: PropTypes.func,
+
   uniqueId: PropTypes.string,
 };
 

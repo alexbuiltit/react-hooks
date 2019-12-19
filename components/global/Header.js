@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const headerStyles = {
@@ -18,38 +19,24 @@ const MainNavigation = styled.nav`
     }
   }
 `;
-const Header = () => (
-  <div style={headerStyles}>
-    <MainNavigation>
-      <ul>
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/modal">
-            <a>A fully accessible Modal</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/stepper">
-            <a>A content stepper</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/accordion">
-            <a>Accordion</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/tabs">
-            <a>Tabs</a>
-          </Link>
-        </li>
-      </ul>
-    </MainNavigation>
-  </div>
-);
+const Header = () => {
+  const router = useRouter();
+  const isHome = router.pathname === '/' ? true : false;
+  return (
+    <div style={headerStyles}>
+      {!isHome && (
+        <MainNavigation>
+          <ul>
+            <li>
+              <Link href="/">
+                <a>Back home</a>
+              </Link>
+            </li>
+          </ul>
+        </MainNavigation>
+      )}
+    </div>
+  );
+};
 
 export default Header;

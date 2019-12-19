@@ -24,7 +24,6 @@
   "eslint.autoFixOnSave": true,
   // Always show the ESlint status bar item.
   "eslint.alwaysShowStatus": false,
-  "prettier.eslintIntegration": true,
   "files.exclude": {
     // exclude .js and .js.map files, when in a TypeScript project
     "**/*.js.map": true,
@@ -37,5 +36,8 @@
   },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "prettier.printWidth": 125
+  "prettier.printWidth": 125,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
