@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Accordion = ({ title, children }) => {
+const Accordion = ({ title, uniqueId, children }) => {
   const [open, setOpen] = useState(false);
   const toggleAccordion = () => {
     setOpen(!open);
@@ -11,15 +11,19 @@ const Accordion = ({ title, children }) => {
     <div className="accordion__item">
       <button
         className="accordion__title"
+        id={`${uniqueId}title`}
         onClick={toggleAccordion}
         aria-expanded={open}
+        aria-controls={uniqueId}
       >
         {title}
       </button>
       {open && (
         <div
           className={`accordion__content ${open ? 'open' : 'closed'}`}
+          id={uniqueId}
           role="region"
+          aria-labelledby={`${uniqueId}title`}
         >
           {children}
         </div>
@@ -29,7 +33,8 @@ const Accordion = ({ title, children }) => {
 };
 
 Accordion.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  uniqueId: PropTypes.string.isRequired,
   children: PropTypes.node,
 };
 
