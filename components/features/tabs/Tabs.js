@@ -25,7 +25,12 @@ const Tabs = ({ children }) => {
 
   if (tabItems) {
     tabNavigation = Object.keys(tabItems).map(item => (
-      <button key={item} onClick={() => setActiveTab(item)}>
+      <button
+        role="tab"
+        aria-selected={activeTab === item ? 'true' : 'false'}
+        key={item}
+        onClick={() => setActiveTab(item)}
+      >
         {tabItems[item].title}
       </button>
     ));
@@ -33,8 +38,10 @@ const Tabs = ({ children }) => {
 
   return (
     <div>
-      <nav>{tabNavigation}</nav>
-      {tabItems[activeTab].content}
+      <div role="tablist" aria-label="Sample Tabs">
+        {tabNavigation}
+      </div>
+      <div role="tabpanel">{tabItems[activeTab].content}</div>
     </div>
   );
 };
@@ -50,6 +57,11 @@ export const Tab = ({ title, children }) => {
       <div className="tab__content">{children}</div>
     </div>
   );
+};
+
+Tab.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Tabs;
