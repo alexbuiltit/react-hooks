@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import styled from 'styled-components';
-
+import SkipToContent from '../features/skipToContent/SkipToContent';
 const Main = styled.main`
   max-width: 1200px;
   padding: 0 20px;
@@ -11,6 +11,7 @@ const Main = styled.main`
 
 const Layout = props => (
   <div>
+    <SkipToContent />
     <Header />
     <Main id="main">{props.children}</Main>
   </div>
